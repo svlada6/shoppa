@@ -1,0 +1,30 @@
+<?php
+
+return [
+    'BACKEND_ADMIN' => 'Backend Admin',
+    'SUPPORT_ADMIN' => 'Support Admin',
+    'CUSTOMER_ADMIN' => 'Customer Admin',
+    'REGULAR_USER' => 'Regular User',
+    'FULFILLMENT_ADMIN' => 'Fulfillment Admin',
+    'MENU_DASHBOARD' => 'Dashboard',
+    'MENU_FAQ' => 'Faq',
+    'MENU_FAQ_CATEGORIES' => 'Faq Categories',
+    'MENU_PAGES' => 'Pages',
+    'MENU_POSTS' => 'Blog Posts',
+    'MENU_POSTS_CATEGORIES' => 'Post Categories',
+    'MENU_PRODUCTS' => 'Products',
+    'MENU_SETTINGS' => 'Settings',
+    'MENU_CUSTOMERS' => 'Customers',
+    'MENU_COLLECTIONS' => 'Collections',
+    'MENU_DISCOUNTS' => 'Discounts',
+    'MENU_PLANS' => 'Plans',
+    'MENU_NAVIGATION' => 'Navigation',
+    'MENU_EMAILS' => 'Emails',
+    'MENU_ORDERS' => 'Orders',
+    'TEST_EMAIL' => 'vladimir.stus@cosmicdeveloment.com',
+    'TEST_EMAIL_SUBJECT' => 'cofee email testing',
+    'TEST_EMAIL_FROM' => 'vladimir.stus@cosmicdevelopment.com',
+    'MENU_TESTEMONIALS' => 'Testemonials',
+    'MENU_REPORTS' => 'Reports',
+     
+];
