@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\SiteController;
 use App\User;
 use Illuminate\Support\Facades\Config;
+use App\Http\Requests\RegistrationRequest;
 
 class RegisterController extends Controller
 {
@@ -22,7 +23,7 @@ class RegisterController extends Controller
         return view('site.register.index');
     }
 
-    public function getLogin()
+    public function getLogin(RegistrationRequest $request)
     {
         $user = User::findOrFail(auth()->user()->id);
 

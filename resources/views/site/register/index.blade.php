@@ -1,48 +1,51 @@
 @extends('site._layouts.default')
 
 @section('content')
-    <section class="login-page center"><!-- login section -->
-        <div class="form-box login-box">
-            <h2>Register</h2>
-            <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+    <!--=== Content Part ===-->
+    <div class="body">
+        <div class="container">		
+            <div class="row-fluid margin-bottom-10">
+                <form class="reg-page" role="form" method="POST" action="{{ url('/register') }}" />
                 {!! csrf_field() !!}
-                <div class="input-line{{ $errors->has('name') ? ' has-error' : '' }}"><!-- input line -->
-                    <input type="text" value="{{old('name')}}"  name="name" placeholder="Name">
+                <h3>Registruj novi nalog</h3>
+                <div class="controls input-line">   
                      @if ($errors->has('email'))
                         <span class="help-block">
                             <strong>{{ $errors->first('name') }}</strong>
                         </span>
                      @endif
-                </div><!-- input line END -->
-                <div class="input-line{{ $errors->has('email') ? ' has-error' : '' }}"><!-- input line -->
-                    <input type="text" value="{{old('email')}}" name="email" placeholder="Email">
+                    <label>Ime i prezime <span class="color-red">*</span></label>
+                    <input type="text" class="span12" value="{{old('name')}}"  name="name" placeholder="Ime" />
                      @if ($errors->has('email'))
                         <span class="help-block">
                             <strong>{{ $errors->first('email') }}</strong>
                         </span>
                      @endif
-                </div><!-- input line END -->
-                <div class="input-line{{ $errors->has('password') ? ' has-error' : '' }}"><!-- input line -->
-                    <input type="password" name="password" placeholder="Password">
-                        @if ($errors->has('password'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('password') }}</strong>
-                            </span>
-                        @endif
-                </div>
-               <div class="input-line{{ $errors->has('password_confirmation') ? ' has-error' : '' }}"><!-- input line -->
-                    <input type="password" name="password_confirmation" placeholder="Confirm Password">
-                        @if ($errors->has('password_confirmation'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('password_confirmation') }}</strong>
-                            </span>
-                        @endif
-                </div><!-- input line END -->
-          
+                    <label>Email adresa <span class="color-red">*</span></label>
+                    <input type="text" class="span12" value="{{old('email')}}" name="email" placeholder="Email" />
+               
+                    @if ($errors->has('password'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('password') }}</strong>
+                        </span>
+                    @endif
+                    <label>Šifra <span class="color-red">*</span></label>
+                    <input  class="span12" type="password" name="password" placeholder="Šifra" />                                   
+                    @if ($errors->has('password_confirmation'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('password_confirmation') }}</strong>
+                        </span>
+                    @endif
+                    <label>ponovi šifru <span class="color-red">*</span></label>
+                    <input class="span12" type="password" name="password_confirmation" placeholder="Potvrdi šifru" />
 
-        </div>
-        <button type="submit" class="main-action" >Register</button>
-        </form>
-    </section><!-- login section END -->
+                <hr />
+                <p>Već registrovani? <a href="{{ url('/public_login') }}" class="color-green">Prijavi se</a> da bi se ulogovali.</p>
+                <button class="btn-u pull-right" type="submit">Registruj se</button>
+                </form>
+            </div><!--/row-fluid-->
+        </div><!--/container-->		
+    </div><!--/body-->
+
 @endsection
 

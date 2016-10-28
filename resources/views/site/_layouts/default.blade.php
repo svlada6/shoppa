@@ -1,20 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        
-        <meta charset="utf-8" />
-        <title>Green St. Coffee</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700' rel='stylesheet' type='text/css'>
-        <script src="{{ asset('site_assets/js/jquery-2.2.1.min.js') }}"></script>
-        <script src="{{ asset('site_assets/js/function.js') }}"></script>
-        <link rel="stylesheet" href="{{ asset('site_assets/css/reset.css') }}" type="text/css" />
-        <link rel="stylesheet" href="{{ asset('site_assets/css/coffee.css') }}" type="text/css" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.js"></script>
+<!--[if IE 7]> <html lang="en" class="ie7"> <![endif]-->  
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<head>
+    <title>Unify | Welcome...</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- CSS Global Compulsory-->
+    <link rel="stylesheet" href="{{ asset('front_assets/plugins/bootstrap/css/bootstrap.min.css')}}" />
+    <link rel="stylesheet" href="{{ asset('front_assets/css/style.css')}}" />
+    <link rel="stylesheet" href="{{ asset('front_assets/css/headers/header1.css')}}" />
+    <link rel="stylesheet" href="{{ asset('front_assets/plugins/bootstrap/css/bootstrap-responsive.min.css')}}" />
+    <link rel="stylesheet" href="{{ asset('front_assets/css/style_responsive.css')}}" />
+    <link rel="shortcut icon" href="favicon.ico" />        
+    <!-- CSS Implementing Plugins -->    
+    <link rel="stylesheet" href="{{ asset('front_assets/plugins/font-awesome/css/font-awesome.css')}}" />
+    <link rel="stylesheet" href="{{ asset('front_assets/plugins/flexslider/flexslider.css')}}" type="text/css" media="screen" />      
+    <link rel="stylesheet" href="{{ asset('front_assets/plugins/parallax-slider/css/parallax-slider.css')}}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('front_assets/plugins/bxslider/jquery.bxslider.css')}}" />
+    <!-- CSS Theme -->    
+    <link rel="stylesheet" href="{{ asset('front_assets/css/themes/default.css')}}" id="style_color" />
+    <link rel="stylesheet" href="{{ asset('front_assets/css/themes/headers/default.css')}}" id="style_color-header-1" />    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.js"></script>
  
-    </head>
+</head>
 
     <body @yield('body_id')>        
         <!-- Header -->

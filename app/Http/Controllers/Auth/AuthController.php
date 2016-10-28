@@ -54,11 +54,20 @@ class AuthController extends Controller
      */
     protected function validator(array $data)
     {
+        $message = [
+           'name.required' => 'Ime i prezime su obavezni',
+           'email.required' => 'Email adresa je obavezna',
+           'email.unique' => 'Email adresa već postoji u sistemu',
+           'email.email' => 'Email adresa nije u ispravnom formatu',
+           'password.required' => 'Šifra je obavezna',
+           'password.confirmed' => 'Unete šifre se ne slažu',
+        ];
+        
         return Validator::make($data, [
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
-        ]);
+        ],$message);
     }
 
     /**
