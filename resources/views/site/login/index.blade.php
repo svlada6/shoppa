@@ -1,33 +1,42 @@
 @extends('site._layouts.default')
 
 @section('content')
-    <section class="login-page center"><!-- login section -->
-        <div class="form-box login-box">
-            <h2>Login</h2>
-            <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
+<div class="body">
+  <div class="container">
+     <div class="row-fluid margin-bottom-10"> 
+            <form class="reg-page" role="form" method="POST" action="{{ url('/login') }}">
                 {!! csrf_field() !!}
-                <div class="input-line{{ $errors->has('email') ? ' has-error' : '' }}"><!-- input line -->
-                    <input type="text" name="email" placeholder="Email">
+                <h3>Prijavi se</h3>
+                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}"><!-- input line -->
                      @if ($errors->has('email'))
-                        <span class="help-block">
+                        <span class="text-error">
                             <strong>{{ $errors->first('email') }}</strong>
                         </span>
                      @endif
+                    <label class="col-md-4 control-label">Email adresa</label>
+                    <input type="text" class="form-control" name="email" placeholder="Email adresa">
+                    
                 </div><!-- input line END -->
-                <div class="input-line{{ $errors->has('password') ? ' has-error' : '' }}"><!-- input line -->
-                    <input type="password" name="password" placeholder="Password">
-                        @if ($errors->has('password'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('password') }}</strong>
-                            </span>
-                        @endif
+                <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}"><!-- input line -->
+                    @if ($errors->has('password'))
+                        <span class="text-error">
+                            <strong>{{ $errors->first('password') }}</strong>
+                        </span>
+                    @endif
+                    <label class="col-md-4 control-label">Šifra</label>
+                    <input type="password" class="form-control" name="password" placeholder="Šifra">
+                       
                 </div><!-- input line END -->
                 <div class="input-line"><!-- input line -->
-                    <a class="form-link" href="{{ url('/password/reset') }}">forgot your password?</a>
+                    <a class="form-link" href="{{ url('/password/reset') }}">Zaboravili se šifru?</a>
                 </div><!-- input line END -->
-            
-        </div>
-        <button type="submit" class="main-action" >Login</button>
-        </form>
-    </section><!-- login section END -->
+
+                <button type="submit" class="btn-u pull-left" >Prijavi se</button>
+            </form>
+       </div>
+    </div>
+</div> 
+
 @endsection
+
+

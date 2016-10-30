@@ -10,14 +10,14 @@
                 <h3>Registruj novi nalog</h3>
                 <div class="controls input-line">   
                      @if ($errors->has('email'))
-                        <span class="help-block">
+                        <span class="text-error">
                             <strong>{{ $errors->first('name') }}</strong>
                         </span>
                      @endif
                     <label>Ime i prezime <span class="color-red">*</span></label>
                     <input type="text" class="span12" value="{{old('name')}}"  name="name" placeholder="Ime" />
                      @if ($errors->has('email'))
-                        <span class="help-block">
+                        <span class="text-error">
                             <strong>{{ $errors->first('email') }}</strong>
                         </span>
                      @endif
@@ -25,14 +25,14 @@
                     <input type="text" class="span12" value="{{old('email')}}" name="email" placeholder="Email" />
                
                     @if ($errors->has('password'))
-                        <span class="help-block">
+                        <span class="text-error">
                             <strong>{{ $errors->first('password') }}</strong>
                         </span>
                     @endif
                     <label>Šifra <span class="color-red">*</span></label>
                     <input  class="span12" type="password" name="password" placeholder="Šifra" />                                   
                     @if ($errors->has('password_confirmation'))
-                        <span class="help-block">
+                        <span class="text-error">
                             <strong>{{ $errors->first('password_confirmation') }}</strong>
                         </span>
                     @endif

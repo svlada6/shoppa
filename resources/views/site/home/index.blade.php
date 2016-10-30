@@ -21,7 +21,8 @@
 </div><!--/style-switcher-->
 <!--=== End Style Switcher ===-->    
 
-<!--=== Top ===-->    
+<!--=== Top ===-->  
+@if(!Auth::check())
 <div class="top">
     <div class="container">			
         <ul class="loginbar pull-right">        	
@@ -31,7 +32,8 @@
         </ul>
     </div>		
 </div><!--/top-->
-<!--=== End Top ===-->    
+<!--=== End Top ===-->
+@endif
 
 
 

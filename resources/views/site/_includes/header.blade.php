@@ -141,16 +141,18 @@
                             </ul>
                             <b class="caret-out"></b>                        
                         </li>
+                        @if(Auth::check())
                         <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profil
                                 <b class="caret"></b>                            
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="page_contact.html">Contact Default</a></li>
-                                <li><a href="page_contact1.html">Contact Boxed Map</a></li>
+                                <li><a href="{{ url('profile') }}"><i class="icon-user"></i> Nalog</a></li>
+                                <li><a href="{{ url('logout') }}"><i class="icon-signout"></i> Odjavi se</a></li>
                             </ul>
                             <b class="caret-out"></b>                        
                         </li>
+                        @endif
                         <li><a class="search"><i class="icon-search search-btn"></i></a></li>                               
                     </ul>
                     <div class="search-open">
